@@ -97,7 +97,7 @@ build_history_list(info, buf + last, linecount++);
 free(buf);
 info->histcount = linecount;
 while (info->histcount-- >= HIST_MAX)
-delete_node_at_index(&(info->history), 0);
+	delete_node_at_index(&(info->hist), 0);
 renumber_history(info);
 return (info->histcount);
 }
